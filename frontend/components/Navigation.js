@@ -1,17 +1,22 @@
 import styled from 'styled-components'
 import { useRouter } from 'next/router'
 import Link from 'next/link'
+import { colors, shadows } from './theme'
+import respondTo from '../components/Breakpoints'
 
 // Components
-import { Container, Flex } from '../components/Containers'
-import { colors, shadows } from '../components/theme'
+import { Container, Flex } from './Containers'
+import SandwichMenu from './Buttons'
 
-export default function Header() {
+export default function Navigation({ setSidebar }) {
     const router = useRouter()
 
     return (
         <StyledHeader>
-            <Container style={{ height: '100%' }}>
+            <StyledMenuContainer>
+                <SandwichMenu setSidebar={setSidebar} />
+            </StyledMenuContainer>
+            <Container style={{ height: '100%', zIndex: '100' }}>
                 <Flex style={{ height: '100%' }} align={'center'} justify={'space-between'}>
                     <Link href='/'>
                         <StyledLogo src="/static/coratives_logo.png" alt="Coratives Logo"/>
@@ -49,26 +54,90 @@ export default function Header() {
     )
 }
 
+const StyledMenuContainer = styled.div`
+    left: 1.5rem;
+    position: absolute;
+    top: 1.5rem;
+    z-index: 103;
+
+    ${respondTo.xs`
+        left: 2rem;
+        top: 2rem;
+    `}
+
+    ${respondTo.lg`
+        display: none;
+    `}
+`
+
 const StyledHeader = styled.header`
     background: ${colors.blue};
-    height: 10rem;
+    height: 8rem;
+    overflow: hidden;
     z-index: 100;
+
+    ${respondTo.xs`
+        height: 10rem;
+    `}
+
+    ${respondTo.xl`
+        height: 12rem;
+    `}
+`
+
+const StyledLine = styled.div`
+    background: #292F33;
+    height: 8px;
+    left: 45.5rem;
+    position: absolute;
+    top: 4.6rem;
+    width: 100vw;
+    z-index: 101;
+
+    ${respondTo.xl`
+        left: 90rem;
+        top: 5.6rem;
+    `}
 `
 
 const StyledLogo = styled.img`
-    height: 4rem;
-    width: 20rem;
+    height: 3rem;
+    width: 15rem;
+    margin: 0 auto;
 
     &:hover {
         cursor: pointer;
     }
+
+    ${respondTo.xs`
+        height: 4rem;
+        width: 20rem;
+    `}
+
+    ${respondTo.lg`
+        margin: 0;
+    `}
+
+    ${respondTo.xl`
+        height: 5rem;
+        width: 24rem;
+    `}
 `
 
 const StyledNav = styled.nav`
     align-items: center;
-    display: flex;
+    display: none;
     justify-content: space-between;
     width: 75rem;
+
+    ${respondTo.lg`
+        display: flex;
+        width: 75rem;
+    `}
+
+    ${respondTo.xl`
+        width: 95rem;
+    `}
 `
 
 const StyledNavButton = styled.button`
@@ -89,6 +158,12 @@ const StyledNavButton = styled.button`
         box-shadow: ${shadows.buttonHover};
         cursor: pointer;
     }
+
+    ${respondTo.xl`
+        font-size: 2rem;
+        height: 4.5rem;
+        width: 22rem;
+    `}
 `
 
 const StyledNavButtonActive = styled.button`
@@ -98,11 +173,11 @@ const StyledNavButtonActive = styled.button`
     border-radius: 36px;
     box-shadow: ${shadows.button};
     font-size: 1.8rem;
-    height: 3.5rem;
+    height: 3rem;
     outline: none;
     text-transform: uppercase;
     transition: all .3s ease;
-    width: 19rem;
+    width: 18rem;
     z-index: 102;
 
     &:hover {
@@ -110,14 +185,10 @@ const StyledNavButtonActive = styled.button`
         box-shadow: ${shadows.buttonHover};
         cursor: pointer;
     }
-`
 
-const StyledLine = styled.div`
-    background: #292F33;
-    height: 8px;
-    left: 45.5rem;
-    position: absolute;
-    top: 4.6rem;
-    width: 100vw;
-    z-index: 101;
+    ${respondTo.xl`
+        font-size: 2rem;
+        height: 4.5rem;
+        width: 22rem;
+    `}
 `
