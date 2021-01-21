@@ -7,7 +7,7 @@ export default function Home() {
 				<title>Public Relations | Coratives | United States</title>
 			</Head>
 
-			<main>
+			<main style={{ height: '50rem' }}>
 				Home Page
 			</main>
 		</div>

@@ -1,6 +1,6 @@
 export default function Blog() {
     return (
-        <div>
+        <div style={{ height: '50rem' }}>
             <h2>Blog</h2>
         </div>
     )

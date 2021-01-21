@@ -3,7 +3,7 @@ import respondTo from '../components/Breakpoints'
 
 export const H1 = styled.h1`
     font-size: 2.8rem;
-    font-weight: light;
+    font-weight: regular;
     line-height: 35px;
     letter-spacing: 3px;
     font-family: 'Montserrat', sans-serif;
@@ -46,12 +46,13 @@ export const H1 = styled.h1`
 
 export const H2 = styled.h2`
     font-size: 2.8rem;
-    font-weight: 300;
+    font-weight: regular;
     line-height: 35px;
     letter-spacing: 3px;
     font-family: 'Montserrat', sans-serif;
     margin: 0;
     padding: 0;
+    letter-spacing: 0.1em;
 
     ${respondTo.xs`
         font-size: 3.5rem;
@@ -82,6 +83,10 @@ export const H2 = styled.h2`
         text-transform: uppercase;
     `}
 
+    ${props => props.bold && css`
+        font-weight: bold;
+    `}
+
 
     ${props => css`
         color: ${props.color}
@@ -94,6 +99,7 @@ export const H3 = styled.h3`
     line-height: 25px;
     letter-spacing: 2px;
     font-family: 'Montserrat', sans-serif;
+    letter-spacing: 0.1em;
 
     ${respondTo.xs`
         font-size: 2.2rem;
@@ -122,6 +128,10 @@ export const H3 = styled.h3`
 
     ${props => props.uppercase && css`
         text-transform: uppercase;
+    `}
+
+    ${props => props.bold && css`
+        font-weight: bold;
     `}
 
     ${props => css`
@@ -321,9 +331,9 @@ export const P4 = styled.p`
 export const P5 = styled.p`
     font-size: 1.2rem;
     line-height: 20px;
-    letter-spacing: .5px;
     font-family: 'Montserrat', sans-serif;
-    font-weight: light;
+    font-weight: regular;
+    letter-spacing: 0.1em;
 
     ${respondTo.xs`
     `}
