@@ -141,7 +141,7 @@ table {
 
 body {
     background: #FFF;
-    font-family: acumin-pro-condensed,sans-serif;
+    font-family: 'Montserrat', sans-serif;
     font-style: normal;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -149,6 +149,6 @@ body {
 }
 
 code {
-  font-family: acumin-pro-condensed, sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-style: normal;
 }

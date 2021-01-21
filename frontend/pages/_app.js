@@ -1,7 +1,62 @@
+import { useState } from 'react'
+import Head from 'next/head'
+import styled, { css } from 'styled-components'
 import '../styles/globals.css'
 
-function MyApp({ Component, pageProps }) {
-  return <Component {...pageProps} />
+
+// Components
+import Header from '../components/Header'
+// import Sidebar from '../components/Sidebar'
+// import Footer from '../components/Footer'
+
+export default function App({ Component, pageProps }) {
+	const [sidebar, setSidebar] = useState(false)
+
+	return (
+		<>
+			<Head>
+				<link rel="icon" href="/favicon.ico" />
+
+				<meta charSet="utf-8" />
+				<meta name="viewport" content="width=device-width, initial-scale=1" />
+				<meta name="theme-color" content="#000000" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" />
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet" />
+			</Head>
+			
+			<Layout setSidebar={setSidebar} sidebar={sidebar}>
+				<Component {...pageProps} />
+			</Layout>
+		</>
+	)
 }
 
-export default MyApp
+const Layout = ({ children, setSidebar, sidebar }) => {
+    return(
+        <>
+            <Header setSidebar={setSidebar} />
+            {/* <Backdrop onClick={() => setSidebar(false)} open={sidebar} />
+            <Sidebar sidebar={sidebar} setSidebar={setSidebar} /> */}
+            {children}
+            {/* <Footer /> */}
+            <footer>Footer</footer>
+        </>
+    )
+}
+
+const Backdrop = styled.div`
+	position: fixed;
+	top: 0;
+	left: 0;
+	height: 100vh;
+	width: 100%;
+	background: #000;
+	z-index: -1;
+	opacity: 0;
+	transition: all .5s ease;
+
+	${props => props.open && css`
+		z-index: 999;
+		opacity: .8;
+	`}
+`
