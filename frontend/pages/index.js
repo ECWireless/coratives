@@ -1,19 +1,22 @@
 import Head from 'next/head'
-import styles from '../styles/Home.module.css'
 
 export default function Home() {
   return (
-    <div className={styles.container}>
+    <div>
       <Head>
-        <title>Coratives</title>
+        <title>Public Relations | Coratives | United States</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className={styles.main}>
-        Coratives
+      <nav>
+        Navigation
+      </nav>
+
+      <main>
+        Main
       </main>
 
-      <footer className={styles.footer}>
+      <footer>
         Footer
       </footer>
     </div>
