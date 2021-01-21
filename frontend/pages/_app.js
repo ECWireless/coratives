@@ -6,7 +6,7 @@ import '../styles/globals.css'
 
 // Components
 import Navigation from '../components/Navigation'
-// import Sidebar from '../components/Sidebar'
+import Sidebar from '../components/Sidebar'
 // import Footer from '../components/Footer'
 
 export default function App({ Component, pageProps }) {
@@ -35,8 +35,8 @@ const Layout = ({ children, setSidebar, sidebar }) => {
     return(
         <>
             <Navigation setSidebar={setSidebar} />
-            {/* <Backdrop onClick={() => setSidebar(false)} open={sidebar} />
-            <Sidebar sidebar={sidebar} setSidebar={setSidebar} /> */}
+            <Backdrop onClick={() => setSidebar(false)} open={sidebar} />
+            <Sidebar sidebar={sidebar} setSidebar={setSidebar} />
             {children}
             {/* <Footer /> */}
             <footer>Footer</footer>
