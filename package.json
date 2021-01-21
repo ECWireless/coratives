@@ -1,0 +1,8 @@
+{
+  "name": "coratives",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/ECWireless/coratives.git",
+  "author": "ECWireless <Elliott@valtechcreative.com>",
+  "license": "MIT"
+}
