@@ -2,23 +2,23 @@ import styled, { css } from 'styled-components'
 import respondTo from '../components/Breakpoints'
 
 export const H1 = styled.h1`
-    font-size: 2.8rem;
+    font-size: 2.6rem;
     font-weight: regular;
     line-height: 35px;
     font-family: 'Montserrat', sans-serif;
 
     ${respondTo.xs`
-        line-height: 40px;
+        line-height: 50px;
         font-size: 3.4rem;
     `}
 
     ${respondTo.sm`
-        font-size: 4.2rem;
+        font-size: 3.5rem;
         line-height: 70px;
     `}
 
     ${respondTo.md`
-        font-size: 4.8rem;
+        font-size: 4.6rem;
     `}
 
     ${respondTo.lg`

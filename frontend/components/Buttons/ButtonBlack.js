@@ -7,12 +7,12 @@ export const ButtonBlack = styled.button`
     border: 1px solid ${colors.white};
     border-radius: 36px;
     color: #FFF;
-    font-size: 1.8rem;
-    height: 5rem;
+    font-size: 1.4rem;
+    height: 4rem;
     outline: none;
     text-transform: uppercase;
     transition: all .3s ease;
-    width: 20rem;
+    width: 18rem;
     z-index: 102;
 
     &:hover {
@@ -21,9 +21,15 @@ export const ButtonBlack = styled.button`
         cursor: pointer;
     }
 
+    ${respondTo.xs`
+        font-size: 1.8rem;
+        height: 5rem;
+        width: 20rem;
+    `}
+
     ${respondTo.xl`
-        font-size: 2rem;
-        height: 4.5rem;
-        width: 22rem;
+        font-size: 2.2rem;
+        height: 6rem;
+        width: 24rem;
     `}
 `
