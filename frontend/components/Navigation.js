@@ -1,4 +1,5 @@
-import styled from 'styled-components'
+import React from 'react'
+import styled, { css } from 'styled-components'
 import { useRouter } from 'next/router'
 import Link from 'next/link'
 import { colors, shadows } from './theme'
@@ -6,13 +7,26 @@ import respondTo from '../components/Breakpoints'
 
 // Components
 import { Container, Flex } from './Containers'
-import SandwichMenu from './Buttons'
+import { SandwichMenu } from './Buttons'
 
 export default function Navigation({ setSidebar }) {
+    const [shadow, setShadow] = React.useState(false)
     const router = useRouter()
 
+    React.useEffect(() => {
+        window.addEventListener('scroll', function() {
+            if (window.pageYOffset === 0) {
+                setShadow(false)
+            } else {
+                setShadow(true)
+            }
+        });
+    }, [])
+    
+
+      
     return (
-        <StyledHeader>
+        <StyledHeader shadow={shadow}>
             <StyledMenuContainer>
                 <SandwichMenu setSidebar={setSidebar} />
             </StyledMenuContainer>
@@ -74,6 +88,10 @@ const StyledHeader = styled.header`
     background: ${colors.blue};
     height: 8rem;
     overflow: hidden;
+    left: 0;
+    position: sticky;
+    top: 0;
+    transition: all .3s ease;
     z-index: 100;
 
     ${respondTo.xs`
@@ -82,6 +100,10 @@ const StyledHeader = styled.header`
 
     ${respondTo.xl`
         height: 12rem;
+    `}
+
+    ${props => props.shadow && css`
+        box-shadow: ${shadows.buttonHover};
     `}
 `
 

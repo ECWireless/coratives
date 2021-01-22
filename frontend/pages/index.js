@@ -1,4 +1,8 @@
 import Head from 'next/head'
+import { colors } from '../components/theme'
+
+// Components
+import Hero from '../components/Home'
 
 export default function Home() {
 	return (
@@ -7,8 +11,8 @@ export default function Home() {
 				<title>Public Relations | Coratives | United States</title>
 			</Head>
 
-			<main style={{ height: '50rem' }}>
-				Home Page
+			<main style={{ background: colors.blue }}>
+				<Hero />
 			</main>
 		</div>
 	)

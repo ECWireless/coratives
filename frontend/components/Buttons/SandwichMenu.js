@@ -4,7 +4,7 @@ import respondTo from '../Breakpoints'
 import { Box3 } from '../Boxes'
 import { Flex } from '../Containers'
 
-const SandwichMenu = ({ setSidebar }) => {
+export const SandwichMenu = ({ setSidebar }) => {
     return (
         <ButtonContainer onClick={() => setSidebar(true)}>
             <Flex direction={'column'} justify={'space-between'}>
@@ -84,5 +84,3 @@ const ButtonMenuLine = styled.div`
         `}
     `};
 `
-
-export default SandwichMenu
