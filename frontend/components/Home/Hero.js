@@ -1,7 +1,7 @@
 import { Fade } from 'react-reveal'
 import styled from 'styled-components'
 import respondTo from '../Breakpoints'
-import { colors } from '../theme'
+import { colors, shadows } from '../theme'
 
 // Components
 import { Box3 } from '../Boxes'
@@ -102,6 +102,7 @@ const StyledButtonsContainer = styled.div`
 
 const StyledHeroForeground = styled.div`
     background: ${colors.blueLight};
+    box-shadow: ${shadows.card};
     height: 100%;
     left: 50%;
     margin: 0 auto;
