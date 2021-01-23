@@ -2,7 +2,7 @@ import Head from 'next/head'
 import { colors } from '../components/theme'
 
 // Components
-import Hero from '../components/Home'
+import { Hero, Services } from '../components/Home'
 
 export default function Home() {
 	return (
@@ -13,6 +13,7 @@ export default function Home() {
 
 			<main style={{ background: colors.blue }}>
 				<Hero />
+				<Services />
 			</main>
 		</div>
 	)

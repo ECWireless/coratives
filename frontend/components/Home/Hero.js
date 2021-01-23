@@ -9,9 +9,9 @@ import { ButtonBlack, ButtonWhite } from '../Buttons'
 import { Container } from '../Containers'
 import { H1 } from '../Typography'
 
-export default function Hero() {
+export function Hero() {
     return (
-        <Box3 paddingTop={25} paddingBottom={75}>
+        <Box3 paddingTop={25}>
             <Container>
                 <StyledBackgroundContainer>
                     <StyledHeroBackground />
