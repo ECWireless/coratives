@@ -82,11 +82,9 @@ const StyledMidContainer = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding-top: 2rem;
 
     ${respondTo.xs`
         height: auto;
-        padding-top: 0;
     `}
 `
 
