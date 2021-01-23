@@ -10,11 +10,12 @@ import { H1, P1 } from '../components/Typography'
 export default function Banner({
     heading,
     subheading,
+    textColor,
     line1Color,
     line2Color,
 }) {
     return (
-        <Box3 marginTop={100} marginBottom={75}>
+        <Box3>
             <StyledBannerContainer>
                 <StyledLeftContainer>
                     <Fade ssrFadeout>
@@ -22,11 +23,13 @@ export default function Banner({
                     </Fade>
                 </StyledLeftContainer>
                 <StyledMidContainer>
-                    <Fade bottom ssrFadeout>
-                        <H1 uppercase>{heading}</H1>
-                    </Fade>
+                    <Box3 marginBottom={25}>
+                        <Fade bottom ssrFadeout>
+                            <H1 color={textColor} uppercase>{heading}</H1>
+                        </Fade>
+                    </Box3>
                     <Fade delay={200} bottom ssrFadeout>
-                        <P1>{subheading}</P1>
+                        <P1 color={textColor}>{subheading}</P1>
                     </Fade>
                 </StyledMidContainer>
                 <StyledRightContainer>

@@ -183,10 +183,10 @@ export const H4 = styled.h4`
 
 export const P1 = styled.p`
     font-size: 1.4rem;
-    line-height: 20px;
-    letter-spacing: 1px;
     font-family: 'Montserrat', sans-serif;
     font-weight: light;
+    padding: 0;
+    margin: 0;
 
     ${respondTo.xs`
         font-size: 1.6rem;
@@ -202,12 +202,10 @@ export const P1 = styled.p`
 
     ${respondTo.lg`
         font-size: 2.2rem;
-        line-height: 25px;
     `}
 
     ${respondTo.xl`
         font-size: 2.8rem;
-        line-height: 25px;
     `}
 
     ${props => props.uppercase && css`
@@ -216,6 +214,10 @@ export const P1 = styled.p`
 
     ${props => props.center && css`
         text-align: center;
+    `}
+
+    ${props => props.bold && css`
+        font-weight: bold;
     `}
 
     ${props => css`
@@ -225,9 +227,10 @@ export const P1 = styled.p`
 
 export const P2 = styled.p`
     font-size: 1.6rem;
-    line-height: 20px;
     font-family: 'Montserrat', sans-serif;
-    font-weight: light;
+    font-weight: regular;
+    padding: 0;
+    margin: 0;
 
     ${respondTo.sm`
         font-size: 1.8rem;
@@ -235,12 +238,10 @@ export const P2 = styled.p`
 
     ${respondTo.md`
         font-size: 2rem;
-        line-height: 25px;
     `}
 
     ${respondTo.xl`
         font-size: 2.6rem;
-        line-height: 30px;
     `}
 
     ${props => props.uppercase && css`
@@ -251,6 +252,10 @@ export const P2 = styled.p`
         text-align: center;
     `}
 
+    ${props => props.bold && css`
+        font-weight: bold;
+    `}
+
     ${props => css`
         color: ${props.color}
     `}
@@ -258,10 +263,10 @@ export const P2 = styled.p`
 
 export const P3 = styled.p`
     font-size: 1.5rem;
-    line-height: 25px;
-    letter-spacing: .5px;
     font-family: 'Montserrat', sans-serif;
-    font-weight: light;
+    font-weight: reglar;
+    padding: 0;
+    margin: 0;
 
     ${respondTo.sm`
         font-size: 1.6rem;
@@ -273,7 +278,6 @@ export const P3 = styled.p`
 
     ${respondTo.xl`
         font-size: 3rem;
-        line-height: 38px;
     `}
 
     ${props => props.uppercase && css`
@@ -295,10 +299,8 @@ export const P3 = styled.p`
 
 export const P4 = styled.p`
     font-size: 1.4rem;
-    line-height: 20px;
-    letter-spacing: .5px;
     font-family: 'Montserrat', sans-serif;
-    font-weight: light;
+    font-weight: regular;
     margin: 0;
     padding: 0;
 
@@ -315,7 +317,6 @@ export const P4 = styled.p`
 
     ${respondTo.xl`
         font-size: 2.2rem;
-        line-height: 27px;
     `}
 
     ${props => props.uppercase && css`
@@ -333,10 +334,8 @@ export const P4 = styled.p`
 
 export const P5 = styled.p`
     font-size: 1.2rem;
-    line-height: 20px;
     font-family: 'Montserrat', sans-serif;
     font-weight: regular;
-    letter-spacing: 0.1em;
 
     ${respondTo.xs`
     `}
@@ -351,7 +350,6 @@ export const P5 = styled.p`
 
     ${respondTo.xl`
         font-size: 1.8rem;
-        line-height: 27px;
     `}
 
     ${props => props.uppercase && css`
