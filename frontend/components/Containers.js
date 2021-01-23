@@ -184,7 +184,7 @@ export const Flex = styled.div`
         `}
 
         ${respondTo.sm`
-            justify-content: flex-start;
+            justify-content: space-around;
         `}
     `}
 `

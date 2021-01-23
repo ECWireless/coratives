@@ -79,6 +79,7 @@ const StyledCirclesContainer = styled.div`
 const StyledFooterBackground = styled.footer`
     background: ${colors.blue};
     position: relative;
+    z-index: 99;
 `
 
 const StyledLine = styled.div`

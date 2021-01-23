@@ -143,7 +143,7 @@ export const H3 = styled.h3`
 export const H4 = styled.h4`
     font-size: 1.8rem;
     line-height: 30px;
-    letter-spacing: 1px;
+    letter-spacing: 0.1em;
     font-family: 'Montserrat', sans-serif;
     font-weight: 300;
 
@@ -156,7 +156,7 @@ export const H4 = styled.h4`
     `}
 
     ${respondTo.lg`
-        font-size: 2.5rem;
+        font-size: 2.2rem;
     `}
 
     ${respondTo.xl`
@@ -172,6 +172,9 @@ export const H4 = styled.h4`
         text-transform: uppercase;
     `}
 
+    ${props => props.bold && css`
+        font-weight: bold;
+    `}
 
     ${props => css`
         color: ${props.color}
@@ -223,7 +226,6 @@ export const P1 = styled.p`
 export const P2 = styled.p`
     font-size: 1.6rem;
     line-height: 20px;
-    letter-spacing: .5px;
     font-family: 'Montserrat', sans-serif;
     font-weight: light;
 
@@ -256,7 +258,7 @@ export const P2 = styled.p`
 
 export const P3 = styled.p`
     font-size: 1.5rem;
-    line-height: 20px;
+    line-height: 25px;
     letter-spacing: .5px;
     font-family: 'Montserrat', sans-serif;
     font-weight: light;
