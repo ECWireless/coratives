@@ -6,6 +6,7 @@ import {
 	Hero,
 	Services,
 	Testimonials,
+	Contact,
 } from '../components/Home'
 
 export default function Home() {
@@ -19,6 +20,7 @@ export default function Home() {
 				<Hero />
 				<Services />
 				<Testimonials />
+				<Contact />
 			</main>
 		</div>
 	)
