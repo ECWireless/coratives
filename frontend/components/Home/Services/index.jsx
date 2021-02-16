@@ -20,6 +20,7 @@ import { Flex, Container } from '../../Containers'
 import { H4, P3 } from '../../Typography'
 
 export function Services({
+        onContactShortcut,
 		servicesHeading,
 		servicesSubheading,
 		card1Heading,
@@ -98,7 +99,7 @@ export function Services({
                                 </Box3>
                                 <Box3 marginTop={25} marginBottom={25}>
                                     <Flex justify={'center'}>
-                                        <StyledLine color={colors.grey} />
+                                        <StyledLine color={colors.yellow} />
                                     </Flex>
                                 </Box3>
                                 <StyedListContainer>
@@ -117,7 +118,7 @@ export function Services({
                         </Fade>
                     </StyledCardContainer>
                     <Box3 marginTop={50}>
-                        <ButtonWhite>Contact</ButtonWhite>
+                        <ButtonWhite onClick={onContactShortcut}>Contact</ButtonWhite>
                     </Box3>
                 </Flex>
             </Container>

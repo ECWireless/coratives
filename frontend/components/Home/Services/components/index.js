@@ -29,7 +29,7 @@ export const StyledCardBlack = styled.div`
     `}
 
     ${respondTo.xl`
-        height: 85rem;
+        height: 70rem;
         padding: 6rem 4rem;
         width: 65rem;
     `}
@@ -89,7 +89,7 @@ export const StyledCardWhite = styled.div`
     `}
 
     ${respondTo.xl`
-        height: 85rem;
+        height: 70rem;
         padding: 6rem 4rem;
         width: 65rem;
     `}

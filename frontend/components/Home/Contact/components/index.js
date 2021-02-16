@@ -3,6 +3,7 @@ import respondTo from '../../../Breakpoints'
 import { colors } from '../../../theme'
 
 export const StyledContactForm = styled.form`
+    box-sizing: border-box;
     background: ${colors.grey};
     border-radius: 36px;
     margin: 0 auto;
@@ -68,7 +69,7 @@ export const StyledInput = styled.input`
     ${respondTo.xl`
         font-size: 2.2rem;
         line-height: 25px;
-        width: 40rem;
+        width: 47rem;
     `}
 
     ${props => props.full && css`

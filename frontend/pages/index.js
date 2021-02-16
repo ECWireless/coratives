@@ -1,3 +1,4 @@
+import React from 'react'
 import Head from 'next/head'
 import imageUrlBuilder from '@sanity/image-url'
 import client from '../client'
@@ -12,6 +13,7 @@ import {
 } from '../components/Home'
 
 export default function Home({ homeProps }) {
+	// Props
 	const {
 		heroHeadingLine1Light,
 		heroHeadingLine1Bold,
@@ -47,6 +49,16 @@ export default function Home({ homeProps }) {
 		contactSubheading,
 	} = homeProps;
 
+	// Refs
+	const servicesRef = React.useRef(null);
+	const testimonialsRef = React.useRef(null);
+	const contactRef = React.useRef(null);
+
+	// Handlers
+	const onServicesShortcut = () => servicesRef.current.scrollIntoView({ behavior: 'smooth' })
+	const onTestimonialsShortcut = () => testimonialsRef.current.scrollIntoView({ behavior: 'smooth' })
+	const onContactShortcut = () => contactRef.current.scrollIntoView({ behavior: 'smooth' })
+
 	return (
 		<div>
 			<Head>
@@ -55,12 +67,18 @@ export default function Home({ homeProps }) {
 
 			<main style={{ background: colors.blue }}>
 				<Hero
+					/* Props */
 					heroHeadingLine1Light={heroHeadingLine1Light}
 					heroHeadingLine1Bold={heroHeadingLine1Bold}
 					heroHeadingLine2Light={heroHeadingLine2Light}
 					heroHeadingLine2Bold={heroHeadingLine2Bold}
+					/* Handlers */
+					onServicesShortcut={onServicesShortcut}
+					onTestimonialsShortcut={onTestimonialsShortcut}
 				/>
+				<div ref={servicesRef} style={{ transform: 'translateY(-50px)'}} />
 				<Services
+					/* Props */
 					servicesHeading={servicesHeading}
 					servicesSubheading={servicesSubheading}
 					card1Heading={card1Heading}
@@ -73,7 +91,10 @@ export default function Home({ homeProps }) {
 					card2ListItem2={card2ListItem2}
 					card2ListItem3={card2ListItem3}
 					card2ListItem4={card2ListItem4}
+					/* Handlers */
+					onContactShortcut={onContactShortcut}
 				/>
+				<div ref={testimonialsRef} style={{ transform: 'translateY(-50px)'}} />
 				<Testimonials
 					testimonialsHeading={testimonialsHeading}
 					testimonialsSubheading={testimonialsSubheading}
@@ -90,6 +111,7 @@ export default function Home({ homeProps }) {
 					testimonial3Title={testimonial3Title}
 					testimonial3Quote={testimonial3Quote}
 				/>
+				<div ref={contactRef} style={{ transform: 'translateY(-50px)'}} />
 				<Contact
 					contactHeading={contactHeading}
 					contactSubheading={contactSubheading}

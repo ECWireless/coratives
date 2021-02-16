@@ -279,6 +279,7 @@ export const P3 = styled.p`
 
     ${respondTo.xl`
         font-size: 3rem;
+        line-height: 38px;
     `}
 
     ${props => props.uppercase && css`

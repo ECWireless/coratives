@@ -15,6 +15,8 @@ import { Container } from '../../Containers'
 import { H1 } from '../../Typography'
 
 export function Hero({
+    onTestimonialsShortcut,
+    onServicesShortcut,
     heroHeadingLine1Light,
     heroHeadingLine1Bold,
     heroHeadingLine2Light,
@@ -36,10 +38,10 @@ export function Hero({
                             </Fade>
                             <StyledButtonsContainer>
                             <Fade delay={200} ssrFadout>
-                                <ButtonBlack>Services</ButtonBlack>
+                                <ButtonBlack onClick={onServicesShortcut}>Services</ButtonBlack>
                             </Fade>
                             <Fade delay={400} ssrFadout>
-                                <ButtonWhite>Testimonials</ButtonWhite>
+                                <ButtonWhite onClick={onTestimonialsShortcut}>Testimonials</ButtonWhite>
                             </Fade>
                             </StyledButtonsContainer>
                         </StyledSloganContainer>
