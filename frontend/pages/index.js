@@ -1,4 +1,6 @@
 import Head from 'next/head'
+import imageUrlBuilder from '@sanity/image-url'
+import client from '../client'
 import { colors } from '../components/theme'
 
 // Components
@@ -9,7 +11,42 @@ import {
 	Contact,
 } from '../components/Home'
 
-export default function Home() {
+export default function Home({ homeProps }) {
+	const {
+		heroHeadingLine1Light,
+		heroHeadingLine1Bold,
+		heroHeadingLine2Light,
+		heroHeadingLine2Bold,
+		servicesHeading,
+		servicesSubheading,
+		card1Heading,
+		card1ListItem1,
+		card1ListItem2,
+		card1ListItem3,
+		card1ListItem4,
+		card2Heading,
+		card2ListItem1,
+		card2ListItem2,
+		card2ListItem3,
+		card2ListItem4,
+		testimonialsHeading,
+		testimonialsSubheading,
+		testimonial1Name,
+		testimonial1Photo,
+		testimonial1Title,
+		testimonial1Quote,
+		testimonial2Name,
+		testimonial2Photo,
+		testimonial2Title,
+		testimonial2Quote,
+		testimonial3Name,
+		testimonial3Photo,
+		testimonial3Title,
+		testimonial3Quote,
+		contactHeading,
+		contactSubheading,
+	} = homeProps;
+
 	return (
 		<div>
 			<Head>
@@ -17,11 +54,91 @@ export default function Home() {
 			</Head>
 
 			<main style={{ background: colors.blue }}>
-				<Hero />
-				<Services />
-				<Testimonials />
-				<Contact />
+				<Hero
+					heroHeadingLine1Light={heroHeadingLine1Light}
+					heroHeadingLine1Bold={heroHeadingLine1Bold}
+					heroHeadingLine2Light={heroHeadingLine2Light}
+					heroHeadingLine2Bold={heroHeadingLine2Bold}
+				/>
+				<Services
+					servicesHeading={servicesHeading}
+					servicesSubheading={servicesSubheading}
+					card1Heading={card1Heading}
+					card1ListItem1={card1ListItem1}
+					card1ListItem2={card1ListItem2}
+					card1ListItem3={card1ListItem3}
+					card1ListItem4={card1ListItem4}
+					card2Heading={card2Heading}
+					card2ListItem1={card2ListItem1}
+					card2ListItem2={card2ListItem2}
+					card2ListItem3={card2ListItem3}
+					card2ListItem4={card2ListItem4}
+				/>
+				<Testimonials
+					testimonialsHeading={testimonialsHeading}
+					testimonialsSubheading={testimonialsSubheading}
+					testimonial1Name={testimonial1Name}
+					testimonial1Photo={urlFor(testimonial1Photo)}
+					testimonial1Title={testimonial1Title}
+					testimonial1Quote={testimonial1Quote}
+					testimonial2Name={testimonial2Name}
+					testimonial2Photo={urlFor(testimonial2Photo)}
+					testimonial2Title={testimonial2Title}
+					testimonial2Quote={testimonial2Quote}
+					testimonial3Name={testimonial3Name}
+					testimonial3Photo={urlFor(testimonial3Photo)}
+					testimonial3Title={testimonial3Title}
+					testimonial3Quote={testimonial3Quote}
+				/>
+				<Contact
+					contactHeading={contactHeading}
+					contactSubheading={contactSubheading}
+				/>
 			</main>
 		</div>
 	)
 }
+
+function urlFor(source) {
+    return imageUrlBuilder(client).image(source)
+}
+
+export async function getStaticProps() {
+	const homeProps = await client.fetch(`*[_type == "home" && slug.current == "v1"][0] {
+		heroHeadingLine1Light,
+		heroHeadingLine1Bold,
+		heroHeadingLine2Light,
+		heroHeadingLine2Bold,
+		servicesHeading,
+		servicesSubheading,
+		card1Heading,
+		card1ListItem1,
+		card1ListItem2,
+		card1ListItem3,
+		card1ListItem4,
+		card2Heading,
+		card2ListItem1,
+		card2ListItem2,
+		card2ListItem3,
+		card2ListItem4,
+		testimonialsHeading,
+		testimonialsSubheading,
+		testimonial1Name,
+		testimonial1Photo,
+		testimonial1Title,
+		testimonial1Quote,
+		testimonial2Name,
+		testimonial2Photo,
+		testimonial2Title,
+		testimonial2Quote,
+		testimonial3Name,
+		testimonial3Photo,
+		testimonial3Title,
+		testimonial3Quote,
+		contactHeading,
+		contactSubheading,
+	}`)
+	return {
+	  props: { homeProps },
+	}
+  }

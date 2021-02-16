@@ -371,3 +371,41 @@ export const P5 = styled.p`
         color: ${props.color}
     `}
 `
+
+// Block Typography
+export const P4Block = styled.div`
+    font-size: 1.4rem;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: regular;
+    margin: 0;
+    padding: 0;
+
+    ${respondTo.xs`
+    `}
+
+    ${respondTo.sm`
+        font-size: 1.5rem;
+    `}
+
+    ${respondTo.md`
+        font-size: 1.6rem;
+        line-height: 20px;
+    `}
+
+    ${respondTo.xl`
+        font-size: 2.2rem;
+        line-height: 25px;
+    `}
+
+    ${props => props.uppercase && css`
+        text-transform: uppercase;
+    `}
+
+    ${props => props.center && css`
+        text-align: center;
+    `}
+
+    ${props => css`
+        color: ${props.color}
+    `}
+`

@@ -2,22 +2,24 @@ import React from 'react';
 import { Fade } from 'react-reveal'
 import styled, { css } from 'styled-components'
 import respondTo from '../Breakpoints'
-import { colors, shadows } from '../theme'
+import { colors } from '../theme'
 
 // Components
 import Banner from '../Banner'
 import { Box3 } from '../Boxes'
 import { ButtonWhite } from '../Buttons'
 import { Container, Flex } from '../Containers'
-import { P1, P2, P3, P4 } from '../Typography'
 
-export function Contact() {
+export function Contact({
+		contactHeading,
+		contactSubheading,
+}) {
     return (
         <div style={{ background: colors.blueLight,  }}>
             <Box3 paddingTop={100} paddingBottom={75}>
                 <Banner
-                    heading={'Want to Learn More?'}
-                    subheading={'Submit the form and someone will be in touch.'}
+                    heading={contactHeading}
+                    subheading={contactSubheading}
                     textColor={colors.grey}
                     line1Color={colors.grey}
                     line2Color={colors.green}

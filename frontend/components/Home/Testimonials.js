@@ -1,4 +1,5 @@
 import React from 'react';
+import BlockContent from '@sanity/block-content-to-react'
 import { Fade } from 'react-reveal'
 import styled, { css } from 'styled-components'
 import respondTo from '../Breakpoints'
@@ -8,9 +9,24 @@ import { colors, shadows } from '../theme'
 import Banner from '../Banner'
 import { Box3 } from '../Boxes'
 import { Container, Flex } from '../Containers'
-import { P1, P2, P3, P4 } from '../Typography'
+import { P1, P2, P3, P4, P4Block } from '../Typography'
 
-export function Testimonials() {
+export function Testimonials({
+		testimonialsHeading,
+		testimonialsSubheading,
+		testimonial1Name,
+		testimonial1Photo,
+		testimonial1Title,
+		testimonial1Quote,
+		testimonial2Name,
+		testimonial2Photo,
+		testimonial2Title,
+		testimonial2Quote,
+		testimonial3Name,
+		testimonial3Photo,
+		testimonial3Title,
+		testimonial3Quote,
+}) {
     const [ testimonialSelection, setTestimonialSelection] = React.useState('1')
 
     return (
@@ -18,8 +34,8 @@ export function Testimonials() {
             <div style={{ background: colors.grey,  }}>
                 <Box3 paddingTop={100} paddingBottom={75}>
                     <Banner
-                        heading={'Testimonials'}
-                        subheading={'What our clients are saying.'}
+                        heading={testimonialsHeading}
+                        subheading={testimonialsSubheading}
                         textColor={colors.white}
                         line1Color={colors.yellow}
                         line2Color={colors.white}
@@ -30,53 +46,63 @@ export function Testimonials() {
                         <Flex wrap={'true'}>
                             <StyledSelectionContainer>
                                 <StyledSelectionItem onClick={() => setTestimonialSelection('1')} active={testimonialSelection === '1'}>
-                                    <StyledSelectionImage src="/static/Testimonial_img_1.jpg" alt="Aysha Saeed"/>
+                                    <StyledSelectionImage src={testimonial1Photo} alt={testimonial1Name}/>
                                     <Flex direction={'column'}>
                                         <Box3 marginBottom={10}>
-                                            <P1 bold uppercase>AYSHA SAEED</P1>
+                                            <P1 bold uppercase>{testimonial1Name}</P1>
                                         </Box3>
-                                        <P2 color={colors.green}>– CEO of Aysha NY</P2>
+                                        <P2 color={colors.green}>
+                                            {testimonial1Title}
+                                        </P2>
                                     </Flex>
                                 </StyledSelectionItem>
                                 <StyledSelectionItem onClick={() => setTestimonialSelection('2')} active={testimonialSelection === '2'}>
-                                    <StyledSelectionImage src="/static/Testimonial_img_2.jpg" alt="Aysha Saeed"/>
+                                    <StyledSelectionImage src={testimonial2Photo} alt={testimonial2Name} />
                                     <Flex direction={'column'}>
                                         <Box3 marginBottom={10}>
-                                            <P1 bold uppercase>JUSTIN MASTRANGELO</P1>
+                                            <P1 bold uppercase>
+                                                {testimonial2Name}
+                                            </P1>
                                         </Box3>
-                                        <P2 color={colors.green}>– Founder of BurghTV</P2>
+                                        <P2 color={colors.green}>
+                                            {testimonial2Title}
+                                        </P2>
                                     </Flex>
                                 </StyledSelectionItem>
                                 <StyledSelectionItem onClick={() => setTestimonialSelection('3')} active={testimonialSelection === '3'}>
-                                    <StyledSelectionImage src="/static/Testimonial_img_3.jpg" alt="Aysha Saeed"/>
+                                    <StyledSelectionImage src={testimonial3Photo} alt={testimonial3Name} />
                                     <Flex direction={'column'}>
                                         <Box3 marginBottom={10}>
-                                            <P1 bold uppercase>ANDY CHAN</P1>
+                                            <P1 bold uppercase>
+                                                {testimonial3Name}
+                                            </P1>
                                         </Box3>
-                                        <P2 color={colors.green}>– CEO of VIT</P2>
+                                        <P2 color={colors.green}>
+                                            {testimonial3Title}
+                                        </P2>
                                     </Flex>
                                 </StyledSelectionItem>
                             </StyledSelectionContainer>
                             {testimonialSelection === '1' && (
                             <SelectedCoontainer
-                                testimonial={`"CORATIVES not only rapidly understood our mission and business goals, but also quickly provided outstanding written marketing & sales material which facilitated a successful launch of a new product concept during one of the most tumultuous times for fashion brands especially. It's obvious they're very passionate about helping businesses not only stay alive, but truly thrive!"`}
-                                name={'Aysha Saeed'}
-                                title={'– CEO of Aysha NY'}
-                                image={'1'}
+                                testimonial={testimonial1Quote}
+                                name={testimonial1Name}
+                                title={testimonial1Title}
+                                image={testimonial1Photo}
                             />)}
                             {testimonialSelection === '2' && (
                             <SelectedCoontainer
-                                testimonial={`"CORATIVES helped burghTV grow from what was just a small idea into an organization with a history of generating terrific content and serious growth potential. Their ability to manage both the content creation of the stories has been invaluable. In addition, their ability to help the organization contact new partners and audiences has shown they understand the artistic side as well as the professional and branding aspects of the organization."`}
-                                name={'Justin Mastrangelo'}
-                                title={'– Founder of BurghTV'}
-                                image={'2'}
+                                testimonial={testimonial2Quote}
+                                name={testimonial2Name}
+                                title={testimonial2Title}
+                                image={testimonial2Photo}
                             />)}
                             {testimonialSelection === '3' && (
                             <SelectedCoontainer
-                                testimonial={`"Working with CORATIVES is providing our sales & marketing team a big boost in confidence. When we share any challenges our team is facing, such as our prospective clients navigating the unpredictable COVID-19 work safety protocols, CORATIVES quickly pulls together creative solution concepts, delivering outstanding results within days. We feel very excited about our partnership with CORATIVES!”`}
-                                name={'Andy Chan'}
-                                title={'– CEO of VIT'}
-                                image={'3'}
+                                testimonial={testimonial3Quote}
+                                name={testimonial3Name}
+                                title={testimonial3Title}
+                                image={testimonial3Photo}
                             />)}
                         </Flex>
                     </Container>
@@ -95,10 +121,14 @@ const SelectedCoontainer = ({
     return (
         <Fade ssrFadeout>
             <StyledSelectedContainer>
-                <StyledSelectedImage src={`/static/Testimonial_img_${image}.jpg`} alt="Aysha Saeed" />
+                <StyledSelectedImage src={image} alt={name} />
                 <StyledTestimonialContainer>
                     <Box3 marginBottom={25}>
-                        <P4>{testimonial}</P4>
+                        <P4Block>
+                            <BlockContent
+                                blocks={testimonial}
+                            />
+                        </P4Block>
                     </Box3>
                     <Box3 marginBottom={10}>
                         <P3 uppercase bold>{name}</P3>

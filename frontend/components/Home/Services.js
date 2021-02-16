@@ -10,13 +10,26 @@ import { ButtonWhite } from '../Buttons'
 import { Flex, Container } from '../Containers'
 import { H4, P3 } from '../Typography'
 
-export function Services() {
+export function Services({
+		servicesHeading,
+		servicesSubheading,
+		card1Heading,
+		card1ListItem1,
+		card1ListItem2,
+		card1ListItem3,
+		card1ListItem4,
+		card2Heading,
+		card2ListItem1,
+		card2ListItem2,
+		card2ListItem3,
+		card2ListItem4,
+}) {
     return (
         <>
             <Box3 paddingTop={100} paddingBottom={75}>
                 <Banner
-                    heading={'Our Services'}
-                    subheading={'Add a short description of your services here.'}
+                    heading={servicesHeading}
+                    subheading={servicesSubheading}
                     textColor={colors.grey}
                     line1Color={colors.grey}
                     line2Color={colors.white}
@@ -35,7 +48,9 @@ export function Services() {
                                     </StyledIcon>
                                 </StyledIconContainer>
                                 <Box3 marginTop={25}>
-                                    <H4 color={colors.grey} uppercase bold center>Social Media Marketing</H4>
+                                    <H4 color={colors.grey} uppercase bold center>
+                                        {card1Heading}
+                                    </H4>
                                 </Box3>
                                 <Box3 marginTop={25} marginBottom={25}>
                                     <Flex justify={'center'}>
@@ -44,16 +59,16 @@ export function Services() {
                                 </Box3>
                                 <StyedListContainer>
                                     <Box3 marginBottom={25}>
-                                        <ListItemComponent iconColor={colors.green} textColor={colors.grey} text={'Marketing Collateral'} />
+                                        <ListItemComponent iconColor={colors.green} textColor={colors.grey} text={card1ListItem1} />
                                     </Box3>
                                     <Box3 marginBottom={25}>
-                                        <ListItemComponent iconColor={colors.green} textColor={colors.grey} text={'Email Campaingns'} />
+                                        <ListItemComponent iconColor={colors.green} textColor={colors.grey} text={card1ListItem2} />
                                     </Box3>
                                     <Box3 marginBottom={25}>
-                                        <ListItemComponent iconColor={colors.green} textColor={colors.grey} text={'Mail Campaigns'} />
+                                        <ListItemComponent iconColor={colors.green} textColor={colors.grey} text={card1ListItem3} />
                                     </Box3>
                                     <Box3 marginBottom={25}>
-                                        <ListItemComponent iconColor={colors.green} textColor={colors.grey} text={'Events'} />
+                                        <ListItemComponent iconColor={colors.green} textColor={colors.grey} text={card1ListItem4} />
                                     </Box3>
                                 </StyedListContainer>
                             </StyledCardWhite>
@@ -68,7 +83,9 @@ export function Services() {
                                     </StyledIcon>
                                 </StyledIconContainer>
                                 <Box3 marginTop={25}>
-                                    <H4 color={colors.white} uppercase bold center>Sales enablement</H4>
+                                    <H4 color={colors.white} uppercase bold center>
+                                        {card2Heading}
+                                    </H4>
                                 </Box3>
                                 <Box3 marginTop={25} marginBottom={25}>
                                     <Flex justify={'center'}>
@@ -77,15 +94,15 @@ export function Services() {
                                 </Box3>
                                 <StyedListContainer>
                                     <Box3 marginBottom={25}>
-                                        <ListItemComponent iconColor={colors.yellow} textColor={colors.white} text={'Lead Generation'} />
+                                        <ListItemComponent iconColor={colors.yellow} textColor={colors.white} text={card2ListItem1} />
                                     </Box3>
                                     <Box3 marginBottom={25}>
-                                        <ListItemComponent iconColor={colors.yellow} textColor={colors.white} text={'Cold Outreach Strategy'} />
+                                        <ListItemComponent iconColor={colors.yellow} textColor={colors.white} text={card2ListItem2} />
                                     </Box3>
                                     <Box3 marginBottom={25}>
-                                        <ListItemComponent iconColor={colors.yellow} textColor={colors.white} text={'Relationship Management Coaching'} />
+                                        <ListItemComponent iconColor={colors.yellow} textColor={colors.white} text={card2ListItem3} />
                                     </Box3>
-                                    <ListItemComponent iconColor={colors.yellow} textColor={colors.white} text={'Presenting Training'} />
+                                    <ListItemComponent iconColor={colors.yellow} textColor={colors.white} text={card2ListItem4} />
                                 </StyedListContainer>
                             </StyledCardBlack>
                         </Fade>
