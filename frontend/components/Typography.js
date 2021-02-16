@@ -377,6 +377,7 @@ export const P4Block = styled.div`
     font-size: 1.4rem;
     font-family: 'Montserrat', sans-serif;
     font-weight: regular;
+    line-height: 18px;
     margin: 0;
     padding: 0;
 
@@ -385,16 +386,16 @@ export const P4Block = styled.div`
 
     ${respondTo.sm`
         font-size: 1.5rem;
+        line-height: 20px;
     `}
 
     ${respondTo.md`
         font-size: 1.6rem;
-        line-height: 20px;
     `}
 
     ${respondTo.xl`
         font-size: 2.2rem;
-        line-height: 25px;
+        line-height: 30px;
     `}
 
     ${props => props.uppercase && css`

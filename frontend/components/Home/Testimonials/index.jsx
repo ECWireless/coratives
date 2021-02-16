@@ -6,7 +6,7 @@ import { colors } from '../../theme'
 // Components
 import {
     StyledSelectedContainer,
-    StyledSelectedImage,
+    StyledSelectedImageContainer,
     StyledSelectionContainer,
     StyledSelectionImage,
     StyledSelectionItem,
@@ -15,6 +15,7 @@ import {
 import Banner from '../../Banner'
 import { Box3 } from '../../Boxes'
 import { Container, Flex } from '../../Containers'
+import Spacer from '../../Spacer'
 import { P1, P2, P3, P4, P4Block } from '../../Typography'
 
 export function Testimonials({
@@ -49,7 +50,7 @@ export function Testimonials({
                 </Box3>
                 <Box3 paddingBottom={100}>
                     <Container>
-                        <Flex wrap={'true'}>
+                        <Flex wrap={'true'} justify={'center'}>
                             <StyledSelectionContainer>
                                 <StyledSelectionItem onClick={() => setTestimonialSelection('1')} active={testimonialSelection === '1'}>
                                     <StyledSelectionImage src={testimonial1Photo} alt={testimonial1Name}/>
@@ -127,7 +128,7 @@ const SelectedCoontainer = ({
     return (
         <Fade ssrFadeout>
             <StyledSelectedContainer>
-                <StyledSelectedImage src={image} alt={name} />
+                {/* <StyledSelectedImage src={image} alt={name} /> */}
                 <StyledTestimonialContainer>
                     <Box3 marginBottom={25}>
                         <P4Block>
@@ -136,10 +137,15 @@ const SelectedCoontainer = ({
                             />
                         </P4Block>
                     </Box3>
+                    <Spacer size={'sm'} />
                     <Box3 marginBottom={10}>
                         <P3 uppercase bold>{name}</P3>
                     </Box3>
                     <P4 color={colors.grey}>{title}</P4>
+                    <Spacer size={'sm'} />
+                    <StyledSelectedImageContainer>
+                        <StyledSelectionImage src={image} alt={name}/>
+                    </StyledSelectedImageContainer>
                 </StyledTestimonialContainer>
             </StyledSelectedContainer>
         </Fade>

@@ -7,27 +7,34 @@ export const StyledSelectedContainer = styled.div`
     flex-direction: column;
 `
 
-export const StyledSelectedImage = styled.img`
-    border-radius: 36px;
-    box-shadow: ${shadows.buttonHover};
-    height: 30rem;
-    margin: 0 auto;
-    width: 30rem;
+// export const StyledSelectedImage = styled.img`
+//     border-radius: 36px;
+//     box-shadow: ${shadows.buttonHover};
+//     height: 30rem;
+//     margin: 0 auto;
+//     width: 30rem;
 
-    ${respondTo.xs`
-        height: 40rem;
-        width: 40rem;
-    `}
+//     ${respondTo.xs`
+//         height: 40rem;
+//         width: 40rem;
+//     `}
 
-    ${respondTo.sm`
-        height: 50rem;
-        width: 50rem;
-    `}
+//     ${respondTo.sm`
+//         height: 50rem;
+//         width: 50rem;
+//     `}
 
-    ${respondTo.xl`
-        height: 75rem;
-        width: 75rem;
-    `}
+//     ${respondTo.xl`
+//         height: 75rem;
+//         width: 75rem;
+//     `}
+// `
+
+export const StyledSelectedImageContainer = styled.div`
+    bottom: 0;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 50%);
 `
 
 export const StyledSelectionContainer = styled.div`
@@ -134,21 +141,24 @@ export const StyledSelectionItem = styled.div`
 
 export const StyledTestimonialContainer = styled.div`
     background: ${colors.white};
+    border: 2px solid ${colors.yellow};
     border-radius: 36px;
     margin: 0 auto;
-    padding: 4rem;
-    transform: translateY(-5rem);
+    padding: 3rem;
+    position: relative;
     width: 28rem;
 
     ${respondTo.xs`
+        padding: 3rem;
         width: 38rem;
     `}
 
     ${respondTo.sm`
-        width: 45rem;
+        padding: 4rem;
+        width: 60rem;
     `}
 
     ${respondTo.xl`
-        width: 70rem;
+        width: 90rem;
     `}
 `
