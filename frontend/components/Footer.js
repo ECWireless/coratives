@@ -11,10 +11,10 @@ export default function Footer() {
     return (
         <StyledFooterBackground>
             <StyledLine />
-            <StyledCirclesContainer>
+            {/* <StyledCirclesContainer>
                 <StyledBlackCircle />
                 <StyledWhiteCircle />
-            </StyledCirclesContainer>
+            </StyledCirclesContainer> */}
             <Container>
                 <Box3 marginTop={75}>
                     <H3 bold center uppercase>CORATIVES ™</H3>
@@ -58,23 +58,23 @@ export default function Footer() {
     )
 }
 
-const StyledBlackCircle = styled.div`
-    background: ${colors.grey};
-    border: 1px solid ${colors.white};
-    border-radius: 50%;
-    height: 5rem;
-    width: 5rem;
-`
+// const StyledBlackCircle = styled.div`
+//     background: ${colors.grey};
+//     border: 1px solid ${colors.white};
+//     border-radius: 50%;
+//     height: 5rem;
+//     width: 5rem;
+// `
 
-const StyledCirclesContainer = styled.div`
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: absolute;
-    top: -2.5rem;
-    left: 50%;
-    transform: translateX(-50%);
-`
+// const StyledCirclesContainer = styled.div`
+//     display: flex;
+//     align-items: center;
+//     justify-content: center;
+//     position: absolute;
+//     top: -2.5rem;
+//     left: 50%;
+//     transform: translateX(-50%);
+// `
 
 const StyledFooterBackground = styled.footer`
     background: ${colors.blue};
@@ -107,10 +107,10 @@ const StyledSvgContainer = styled.div`
     width: 15rem;
 `
 
-const StyledWhiteCircle = styled.div`
-    background: ${colors.white};
-    border-radius: 50%;
-    box-shadow: ${shadows.buttonHover};
-    height: 5.5rem;
-    width: 5.5rem;
-`
+// const StyledWhiteCircle = styled.div`
+//     background: ${colors.white};
+//     border-radius: 50%;
+//     box-shadow: ${shadows.buttonHover};
+//     height: 5.5rem;
+//     width: 5.5rem;
+// `

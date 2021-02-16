@@ -1,15 +1,21 @@
 import React from 'react';
 import BlockContent from '@sanity/block-content-to-react'
 import { Fade } from 'react-reveal'
-import styled, { css } from 'styled-components'
-import respondTo from '../Breakpoints'
-import { colors, shadows } from '../theme'
+import { colors } from '../../theme'
 
 // Components
-import Banner from '../Banner'
-import { Box3 } from '../Boxes'
-import { Container, Flex } from '../Containers'
-import { P1, P2, P3, P4, P4Block } from '../Typography'
+import {
+    StyledSelectedContainer,
+    StyledSelectedImage,
+    StyledSelectionContainer,
+    StyledSelectionImage,
+    StyledSelectionItem,
+    StyledTestimonialContainer,
+} from './components'
+import Banner from '../../Banner'
+import { Box3 } from '../../Boxes'
+import { Container, Flex } from '../../Containers'
+import { P1, P2, P3, P4, P4Block } from '../../Typography'
 
 export function Testimonials({
 		testimonialsHeading,
@@ -51,7 +57,7 @@ export function Testimonials({
                                         <Box3 marginBottom={10}>
                                             <P1 bold uppercase>{testimonial1Name}</P1>
                                         </Box3>
-                                        <P2 color={colors.green}>
+                                        <P2 color={colors.grey}>
                                             {testimonial1Title}
                                         </P2>
                                     </Flex>
@@ -64,7 +70,7 @@ export function Testimonials({
                                                 {testimonial2Name}
                                             </P1>
                                         </Box3>
-                                        <P2 color={colors.green}>
+                                        <P2 color={colors.grey}>
                                             {testimonial2Title}
                                         </P2>
                                     </Flex>
@@ -77,7 +83,7 @@ export function Testimonials({
                                                 {testimonial3Name}
                                             </P1>
                                         </Box3>
-                                        <P2 color={colors.green}>
+                                        <P2 color={colors.grey}>
                                             {testimonial3Title}
                                         </P2>
                                     </Flex>
@@ -133,160 +139,9 @@ const SelectedCoontainer = ({
                     <Box3 marginBottom={10}>
                         <P3 uppercase bold>{name}</P3>
                     </Box3>
-                    <P4 color={colors.green}>{title}</P4>
+                    <P4 color={colors.grey}>{title}</P4>
                 </StyledTestimonialContainer>
             </StyledSelectedContainer>
         </Fade>
     )
 }
-
-const StyledSelectedContainer = styled.div`
-    display: flex;
-    flex-direction: column;
-`
-
-const StyledSelectedImage = styled.img`
-    border-radius: 36px;
-    box-shadow: ${shadows.buttonHover};
-    height: 30rem;
-    margin: 0 auto;
-    width: 30rem;
-
-    ${respondTo.xs`
-        height: 40rem;
-        width: 40rem;
-    `}
-
-    ${respondTo.sm`
-        height: 50rem;
-        width: 50rem;
-    `}
-
-    ${respondTo.xl`
-        height: 75rem;
-        width: 75rem;
-    `}
-`
-
-const StyledSelectionContainer = styled.div`
-    display: flex;
-    flex-direction: column;
-    height: 34rem;
-    justify-content: space-between;
-    margin-bottom: 4rem;
-
-    ${respondTo.xs`
-        height: 38rem;
-        margin-bottom: 6rem;
-    `}
-
-    ${respondTo.sm`
-        margin-bottom: 8rem;
-    `}
-
-    ${respondTo.lg`
-        height: 55rem;
-        margin-bottom: 0;
-    `}
-
-    ${respondTo.xl`
-        height: 68rem;
-    `}
-`
-
-const StyledSelectionImage = styled.img`
-    border: 4px solid ${colors.white};
-    border-radius: 50%;
-    box-shadow: ${shadows.buttonHover};
-    height: 6rem;
-    margin-left: 2rem;
-    margin-right: 2rem;
-    width: 6rem;
-
-    ${respondTo.xs`
-        height: 8rem;
-        margin-left: 3rem;
-        margin-right: 2rem;
-        width: 8rem;
-    `}
-
-    ${respondTo.lg`
-        height: 10rem;
-        margin-left: 5rem;
-        margin-right: 4rem;
-        width: 10rem;
-    `}
-`
-
-const StyledSelectionItem = styled.div`
-    align-items: center;
-    background: ${colors.white};
-    border: 2px solid ${colors.white};
-    border-radius: 36px;
-    box-shadow: ${shadows.card};
-    display: flex;
-    height: 10rem;
-    transition: all .3s ease;
-    width: 30rem;
-
-    &:hover {
-        cursor: pointer;
-        box-shadow: ${shadows.buttonHover};
-        border: 2px solid ${colors.green};
-
-        ${props => props.active && css`
-            border-left: 10px solid ${colors.green};
-        `}
-    }
-
-    &:active,
-    &:focus {
-        cursor: pointer;
-        box-shadow: ${shadows.buttonHover};
-        border: 2px solid ${colors.green};
-        border-left: 10px solid ${colors.green};
-    }
-
-    ${respondTo.xs`
-        height: 11rem;
-        width: 40rem;
-    `}
-
-    ${respondTo.lg`
-        height: 15rem;
-        width: 50rem;
-    `}
-
-    ${respondTo.xl`
-        height: 20rem;
-        width: 65rem;
-    `}
-
-    ${props => props.active && css`
-        cursor: pointer;
-        box-shadow: ${shadows.buttonHover};
-        border: 2px solid ${colors.green};
-        border-left: 10px solid ${colors.green};
-    `}
-`
-
-const StyledTestimonialContainer = styled.div`
-    background: ${colors.white};
-    border-radius: 36px;
-    margin: 0 auto;
-    padding: 4rem;
-    transform: translateY(-5rem);
-    width: 28rem;
-
-    ${respondTo.xs`
-        width: 38rem;
-    `}
-
-    ${respondTo.sm`
-        width: 45rem;
-    `}
-
-    ${respondTo.xl`
-        width: 70rem;
-    `}
-`
