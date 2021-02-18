@@ -25,7 +25,6 @@ export default async function(req, res) {
     to: 'Elliott@valtechcreative.com',
     from: 'Elliott@valtechcreative.com',
     subject: `New Contact Form Submission - ${email}`,
-    text: message,
     html: `
       <p>New contact form submission from ${name}.</p>
       <br/>
