@@ -13,6 +13,7 @@ import author from './author'
 // Pages
 import home from './home'
 import about from './about'
+import contact from './contact'
 
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
@@ -25,6 +26,7 @@ export default createSchema({
     // in the studio.
     home,
     about,
+    contact,
     post,
     author,
     category,

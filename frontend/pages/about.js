@@ -15,6 +15,7 @@ import Spacer from '../components/Spacer'
 import { P2Block } from '../components/Typography'
 
 export default function About({ aboutProps }) {
+    // Props
     const {
         aboutHeading,
         aboutPhoto,
@@ -134,4 +135,4 @@ export async function getStaticProps() {
 	return {
 	  props: { aboutProps },
 	}
-  }
+}
