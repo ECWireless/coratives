@@ -1,4 +1,5 @@
 import Head from 'next/head'
+import { Fade } from 'react-reveal'
 import styled from 'styled-components'
 import BlockContent from '@sanity/block-content-to-react'
 import imageUrlBuilder from '@sanity/image-url'
@@ -34,17 +35,19 @@ export default function About({ aboutProps }) {
                         line2Color={colors.white}
                     />
                 </Box3>
-                <Container>
-                    <StyledAboutPhoto style={{ backgroundImage: `url(${urlFor(aboutPhoto)})`}} />
-                    <StyledAboutTextContainer>
-                        <P2Block>
-                            <BlockContent
-                                blocks={aboutDescription}
-                            />
-                        </P2Block>
-                    </StyledAboutTextContainer>
-                    <Spacer size={'lg'} />
-                </Container>
+                <Fade delay={400} ssrFadeout>
+                    <Container>
+                            <StyledAboutPhoto style={{ backgroundImage: `url(${urlFor(aboutPhoto)})`}} />
+                            <StyledAboutTextContainer>
+                                <P2Block>
+                                    <BlockContent
+                                        blocks={aboutDescription}
+                                    />
+                                </P2Block>
+                            </StyledAboutTextContainer>
+                        <Spacer size={'lg'} />
+                    </Container>
+                </Fade>
             </main>
         </div>
     )
