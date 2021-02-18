@@ -77,7 +77,7 @@ export function Contact({
     const handleOnSubmit = async e => {
         e.preventDefault()
         setStatus(prevStatus => ({ ...prevStatus, submitting: true }))
-        const res = await fetch('/api/contact', {
+        const res = await fetch('/api/hello', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
