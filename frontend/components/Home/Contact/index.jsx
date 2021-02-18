@@ -51,7 +51,6 @@ export function Contact({
                 title: '',
                 company: '',
             })
-            router.replace('/thank-you')
             setSnackbar(true)
         } else {
             setStatus({
