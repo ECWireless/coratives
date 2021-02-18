@@ -28,9 +28,9 @@ export default function Banner({
                             <H1 color={textColor} uppercase>{heading}</H1>
                         </Fade>
                     </Box3>
-                    <Fade delay={200} bottom ssrFadeout>
+                    {subheading && <Fade delay={200} bottom ssrFadeout>
                         <P1 color={textColor}>{subheading}</P1>
-                    </Fade>
+                    </Fade>}
                 </StyledMidContainer>
                 <StyledRightContainer>
                     <Fade ssrFadeout>

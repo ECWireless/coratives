@@ -229,6 +229,7 @@ export const P2 = styled.p`
     font-size: 1.6rem;
     font-family: 'Montserrat', sans-serif;
     font-weight: regular;
+    line-height: 20px;
     padding: 0;
     margin: 0;
 
@@ -238,10 +239,12 @@ export const P2 = styled.p`
 
     ${respondTo.md`
         font-size: 2rem;
+        line-height: 25px;
     `}
 
     ${respondTo.xl`
         font-size: 2.6rem;
+        line-height: 35px;
     `}
 
     ${props => props.uppercase && css`
@@ -374,6 +377,45 @@ export const P5 = styled.p`
 `
 
 // Block Typography
+export const P2Block = styled.div`
+    font-size: 1.6rem;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: regular;
+    line-height: 20px;
+    padding: 0;
+    margin: 0;
+
+    ${respondTo.sm`
+        font-size: 1.8rem;
+    `}
+
+    ${respondTo.md`
+        font-size: 2rem;
+        line-height: 25px;
+    `}
+
+    ${respondTo.xl`
+        font-size: 2.6rem;
+        line-height: 35px;
+    `}
+
+    ${props => props.uppercase && css`
+        text-transform: uppercase;
+    `}
+
+    ${props => props.center && css`
+        text-align: center;
+    `}
+
+    ${props => props.bold && css`
+        font-weight: bold;
+    `}
+
+    ${props => css`
+        color: ${props.color}
+    `}
+`
+
 export const P4Block = styled.div`
     font-size: 1.4rem;
     font-family: 'Montserrat', sans-serif;
