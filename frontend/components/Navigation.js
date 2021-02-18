@@ -203,7 +203,7 @@ const StyledNavButtonActive = styled.button`
     z-index: 102;
 
     &:hover {
-        border: 1px solid ${colors.green};
+        border: 1px solid ${colors.grey};
         box-shadow: ${shadows.buttonHover};
         cursor: pointer;
     }

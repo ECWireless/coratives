@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { colors, shadows } from './theme'
+import { colors } from './theme'
 
 // Components
 import { Box3 } from './Boxes'
@@ -96,7 +96,7 @@ const StyledSvg = styled.svg`
     width: 3.2rem;
 
     &:hover {
-        fill: ${colors.green};
+        fill: ${colors.yellow};
     }
 `
 

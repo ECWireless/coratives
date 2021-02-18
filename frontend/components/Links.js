@@ -13,7 +13,7 @@ export const CustomLink = styled.a`
         cursor: pointer;
 
         ${props => props.hover && css`
-            color: ${colors.green};
+            color: ${colors.yellow};
         `}
     }
 `
