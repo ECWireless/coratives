@@ -48,7 +48,7 @@ export const StyledInput = styled.input`
 
     &:active,
     &:focus {
-        border-bottom: 2px solid ${colors.green};
+        border-bottom: 2px solid ${colors.yellow};
     }
 
     ${respondTo.xs`

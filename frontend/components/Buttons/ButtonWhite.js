@@ -17,7 +17,7 @@ export const ButtonWhite = styled.button`
     z-index: 102;
 
     &:hover {
-        border: 1px solid ${colors.green};
+        border: 1px solid ${colors.yellow};
         box-shadow: ${shadows.buttonHover};
         cursor: pointer;
     }
