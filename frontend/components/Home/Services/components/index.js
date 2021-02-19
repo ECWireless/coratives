@@ -8,7 +8,7 @@ export const StyledCardBlack = styled.div`
     border-radius: 36px;
     box-shadow: ${shadows.card};
     padding: 4rem 2rem;
-    height: 45rem;
+    min-height: 45rem;
     transition: all .3s ease;
     width: 100%;
 
@@ -18,18 +18,18 @@ export const StyledCardBlack = styled.div`
     }
 
     ${respondTo.xs`
-        height: 50rem;
+        min-height: 50rem;
         padding: 5rem 2rem;
         width: 40rem;
     `}
 
     ${respondTo.md`
-        height: 60rem;
+        min-height: 60rem;
         width: 40rem;
     `}
 
     ${respondTo.xl`
-        height: 70rem;
+        min-height: 70rem;
         padding: 6rem 4rem;
         width: 65rem;
     `}
@@ -62,7 +62,7 @@ export const StyledCardWhite = styled.div`
     border: 2px solid ${colors.white};
     box-shadow: ${shadows.card};
     border-radius: 36px;
-    height: 45rem;
+    min-height: 45rem;
     margin-bottom: 3rem;
     padding: 5rem 2rem;
     transition: all .3s ease;
@@ -74,7 +74,7 @@ export const StyledCardWhite = styled.div`
     }
 
     ${respondTo.xs`
-        height: 50rem;
+        min-height: 50rem;
         width: 40rem;
     `}
 
@@ -83,13 +83,13 @@ export const StyledCardWhite = styled.div`
     `}
 
     ${respondTo.md`
-        height: 60rem;
+        min-height: 60rem;
         width: 40rem;
         margin-bottom: 0;
     `}
 
     ${respondTo.xl`
-        height: 70rem;
+        min-height: 70rem;
         padding: 6rem 4rem;
         width: 65rem;
     `}

@@ -73,6 +73,26 @@ export default {
             type: 'string'
         },
         {
+            name: 'card1ListItem5',
+            title: 'Card 1 List Item 5',
+            type: 'string'
+        },
+        {
+            name: 'card1ListItem6',
+            title: 'Card 1 List Item 6',
+            type: 'string'
+        },
+        {
+            name: 'card1ListItem7',
+            title: 'Card 1 List Item 7',
+            type: 'string'
+        },
+        {
+            name: 'card1ListItem8',
+            title: 'Card 1 List Item 8',
+            type: 'string'
+        },
+        {
             name: 'card2Heading',
             title: 'Card 2 Heading',
             type: 'string'
@@ -95,6 +115,26 @@ export default {
         {
             name: 'card2ListItem4',
             title: 'Card 2 List Item 4',
+            type: 'string'
+        },
+        {
+            name: 'card2ListItem5',
+            title: 'Card 2 List Item 5',
+            type: 'string'
+        },
+        {
+            name: 'card2ListItem6',
+            title: 'Card 2 List Item 6',
+            type: 'string'
+        },
+        {
+            name: 'card2ListItem7',
+            title: 'Card 2 List Item 7',
+            type: 'string'
+        },
+        {
+            name: 'card2ListItem8',
+            title: 'Card 2 List Item 8',
             type: 'string'
         },
         {

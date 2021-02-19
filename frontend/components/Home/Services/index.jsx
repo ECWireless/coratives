@@ -28,11 +28,19 @@ export function Services({
 		card1ListItem2,
 		card1ListItem3,
 		card1ListItem4,
+		card1ListItem5,
+		card1ListItem6,
+		card1ListItem7,
+		card1ListItem8,
 		card2Heading,
 		card2ListItem1,
 		card2ListItem2,
 		card2ListItem3,
 		card2ListItem4,
+		card2ListItem5,
+		card2ListItem6,
+		card2ListItem7,
+		card2ListItem8,
 }) {
     return (
         <>
@@ -68,18 +76,30 @@ export function Services({
                                     </Flex>
                                 </Box3>
                                 <StyedListContainer>
-                                    <Box3 marginBottom={25}>
+                                    {card1ListItem1 && <Box3 marginBottom={25}>
                                         <ListItemComponent iconColor={colors.grey} textColor={colors.grey} text={card1ListItem1} />
-                                    </Box3>
-                                    <Box3 marginBottom={25}>
+                                    </Box3>}
+                                    {card1ListItem2 && <Box3 marginBottom={25}>
                                         <ListItemComponent iconColor={colors.grey} textColor={colors.grey} text={card1ListItem2} />
-                                    </Box3>
-                                    <Box3 marginBottom={25}>
+                                    </Box3>}
+                                    {card1ListItem3 && <Box3 marginBottom={25}>
                                         <ListItemComponent iconColor={colors.grey} textColor={colors.grey} text={card1ListItem3} />
-                                    </Box3>
-                                    <Box3 marginBottom={25}>
+                                    </Box3>}
+                                    {card1ListItem4 && <Box3 marginBottom={25}>
                                         <ListItemComponent iconColor={colors.grey} textColor={colors.grey} text={card1ListItem4} />
-                                    </Box3>
+                                    </Box3>}
+                                    {card1ListItem5 && <Box3 marginBottom={25}>
+                                        <ListItemComponent iconColor={colors.grey} textColor={colors.grey} text={card1ListItem5} />
+                                    </Box3>}
+                                    {card1ListItem6 && <Box3 marginBottom={25}>
+                                        <ListItemComponent iconColor={colors.grey} textColor={colors.grey} text={card1ListItem6} />
+                                    </Box3>}
+                                    {card1ListItem7 && <Box3 marginBottom={25}>
+                                        <ListItemComponent iconColor={colors.grey} textColor={colors.grey} text={card1ListItem7} />
+                                    </Box3>}
+                                    {card1ListItem8 && <Box3 marginBottom={25}>
+                                        <ListItemComponent iconColor={colors.grey} textColor={colors.grey} text={card1ListItem8} />
+                                    </Box3>}
                                 </StyedListContainer>
                             </StyledCardWhite>
                         </Fade>
@@ -103,16 +123,30 @@ export function Services({
                                     </Flex>
                                 </Box3>
                                 <StyedListContainer>
-                                    <Box3 marginBottom={25}>
+                                    {card2ListItem1 && <Box3 marginBottom={25}>
                                         <ListItemComponent iconColor={colors.yellow} textColor={colors.white} text={card2ListItem1} />
-                                    </Box3>
-                                    <Box3 marginBottom={25}>
+                                    </Box3>}
+                                    {card2ListItem2 && <Box3 marginBottom={25}>
                                         <ListItemComponent iconColor={colors.yellow} textColor={colors.white} text={card2ListItem2} />
-                                    </Box3>
-                                    <Box3 marginBottom={25}>
+                                    </Box3>}
+                                    {card2ListItem3 && <Box3 marginBottom={25}>
                                         <ListItemComponent iconColor={colors.yellow} textColor={colors.white} text={card2ListItem3} />
-                                    </Box3>
-                                    <ListItemComponent iconColor={colors.yellow} textColor={colors.white} text={card2ListItem4} />
+                                    </Box3>}
+                                    {card2ListItem4 && <Box3 marginBottom={25}>
+                                        <ListItemComponent iconColor={colors.yellow} textColor={colors.white} text={card2ListItem4} />
+                                    </Box3>}
+                                    {card2ListItem5 && <Box3 marginBottom={25}>
+                                        <ListItemComponent iconColor={colors.yellow} textColor={colors.white} text={card2ListItem5} />
+                                    </Box3>}
+                                    {card2ListItem6 && <Box3 marginBottom={25}>
+                                        <ListItemComponent iconColor={colors.yellow} textColor={colors.white} text={card2ListItem6} />
+                                    </Box3>}
+                                    {card2ListItem7 && <Box3 marginBottom={25}>
+                                        <ListItemComponent iconColor={colors.yellow} textColor={colors.white} text={card2ListItem7} />
+                                    </Box3>}
+                                    {card2ListItem8 && <Box3 marginBottom={25}>
+                                        <ListItemComponent iconColor={colors.yellow} textColor={colors.white} text={card2ListItem8} />
+                                    </Box3>}
                                 </StyedListContainer>
                             </StyledCardBlack>
                         </Fade>

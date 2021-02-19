@@ -26,11 +26,19 @@ export default function Home({ homeProps }) {
 		card1ListItem2,
 		card1ListItem3,
 		card1ListItem4,
+		card1ListItem5,
+		card1ListItem6,
+		card1ListItem7,
+		card1ListItem8,
 		card2Heading,
 		card2ListItem1,
 		card2ListItem2,
 		card2ListItem3,
 		card2ListItem4,
+		card2ListItem5,
+		card2ListItem6,
+		card2ListItem7,
+		card2ListItem8,
 		testimonialsHeading,
 		testimonialsSubheading,
 		testimonial1Name,
@@ -86,11 +94,19 @@ export default function Home({ homeProps }) {
 					card1ListItem2={card1ListItem2}
 					card1ListItem3={card1ListItem3}
 					card1ListItem4={card1ListItem4}
+					card1ListItem5={card1ListItem5}
+					card1ListItem6={card1ListItem6}
+					card1ListItem7={card1ListItem7}
+					card1ListItem8={card1ListItem8}
 					card2Heading={card2Heading}
 					card2ListItem1={card2ListItem1}
 					card2ListItem2={card2ListItem2}
 					card2ListItem3={card2ListItem3}
 					card2ListItem4={card2ListItem4}
+					card2ListItem5={card2ListItem5}
+					card2ListItem6={card2ListItem6}
+					card2ListItem7={card2ListItem7}
+					card2ListItem8={card2ListItem8}
 					/* Handlers */
 					onContactShortcut={onContactShortcut}
 				/>
@@ -138,11 +154,19 @@ export async function getStaticProps() {
 		card1ListItem2,
 		card1ListItem3,
 		card1ListItem4,
+		card1ListItem5,
+		card1ListItem6,
+		card1ListItem7,
+		card1ListItem8,
 		card2Heading,
 		card2ListItem1,
 		card2ListItem2,
 		card2ListItem3,
 		card2ListItem4,
+		card2ListItem5,
+		card2ListItem6,
+		card2ListItem7,
+		card2ListItem8,
 		testimonialsHeading,
 		testimonialsSubheading,
 		testimonial1Name,
