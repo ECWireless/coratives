@@ -141,7 +141,7 @@ function urlFor(source) {
     return imageUrlBuilder(client).image(source)
 }
 
-export async function getStaticProps() {
+export async function getServerSideProps() {
 	const homeProps = await client.fetch(`*[_type == "home" && slug.current == "v1"][0] {
 		heroHeadingLine1Light,
 		heroHeadingLine1Bold,
