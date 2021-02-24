@@ -126,7 +126,7 @@ function urlFor(source) {
     return imageUrlBuilder(client).image(source)
 }
 
-export async function getStaticProps() {
+export async function getServerSideProps() {
 	const aboutProps = await client.fetch(`*[_type == "about" && slug.current == "v1"][0] {
 		aboutHeading,
         aboutPhoto,

@@ -41,7 +41,7 @@ export default function Blog({ blogProps }) {
     )
 }
 
-export async function getStaticProps() {
+export async function getServerSideProps() {
 	const blogProps = await client.fetch(`*[_type == "blog" && slug.current == "v1"][0] {
 		blogHeading,
 	}`)

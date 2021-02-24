@@ -212,7 +212,7 @@ export default function Contact({ contactProps }) {
     )
 }
 
-export async function getStaticProps() {
+export async function getServerSideProps() {
 	const contactProps = await client.fetch(`*[_type == "contact" && slug.current == "v1"][0] {
 		contactHeading,
         contactSubheading,
