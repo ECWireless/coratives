@@ -52,7 +52,7 @@ export const StyledInput = styled.input`
     }
 
     ${respondTo.xs`
-        width: 15rem;
+        width: 32rem;
     `}
 
     ${respondTo.sm`

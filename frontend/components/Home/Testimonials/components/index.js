@@ -87,6 +87,29 @@ export const StyledSelectionImage = styled.img`
     `}
 `
 
+export const StyledSelectionImageBig = styled.img`
+    border: 4px solid ${colors.white};
+    border-radius: 50%;
+    box-shadow: ${shadows.buttonHover};
+    height: 9rem;
+    width: 9rem;
+
+    ${respondTo.xs`
+        height: 12rem;
+        width: 12rem;
+    `}
+
+    ${respondTo.sm`
+        height: 15rem;
+        width: 15rem;
+    `}
+
+    ${respondTo.xl`
+        height: 20rem;
+        width: 20rem;
+    `}
+`
+
 export const StyledSelectionItem = styled.div`
     align-items: center;
     background: ${colors.white};

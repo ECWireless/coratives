@@ -9,6 +9,7 @@ import {
     StyledSelectedImageContainer,
     StyledSelectionContainer,
     StyledSelectionImage,
+    StyledSelectionImageBig,
     StyledSelectionItem,
     StyledTestimonialContainer,
 } from './components'
@@ -142,9 +143,9 @@ const SelectedCoontainer = ({
                         <P3 uppercase bold>{name}</P3>
                     </Box3>
                     <P4 color={colors.grey}>{title}</P4>
-                    <Spacer size={'sm'} />
+                    <Spacer size={'md'} />
                     <StyledSelectedImageContainer>
-                        <StyledSelectionImage src={image} alt={name}/>
+                        <StyledSelectionImageBig src={image} alt={name}/>
                     </StyledSelectedImageContainer>
                 </StyledTestimonialContainer>
             </StyledSelectedContainer>

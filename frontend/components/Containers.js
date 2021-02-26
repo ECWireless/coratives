@@ -185,6 +185,10 @@ export const Flex = styled.div`
 
         ${respondTo.sm`
             justify-content: space-around;
+
+            ${props => props.justify === 'space-between' && css`
+                justify-content: space-between;
+            `}
         `}
     `}
 `
