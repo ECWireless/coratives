@@ -7,7 +7,7 @@ export default async function(req, res) {
 
   const confirmationEmail = {
     to: email,
-    from: 'Elliott@valtechcreative.com',
+    from: 'mflynn@coratives.com ',
     subject: `Submission was successful!`,
     html: `
       <p>Thank you for contacting us! We will be in touch shortly.</p>
@@ -16,14 +16,14 @@ export default async function(req, res) {
       <p>Name: ${name}</p>
       <p>Email: ${email}</p>
       <p>Phone: ${phone}</p>
-      <p>Phone: ${title}</p>
+      <p>Title: ${title}</p>
       <p>Company: ${company}</p>
     `
   }
 
   const notificationEmail = {
-    to: 'Elliott@valtechcreative.com',
-    from: 'Elliott@valtechcreative.com',
+    to: 'mflynn@coratives.com ',
+    from: 'mflynn@coratives.com ',
     subject: `New Contact Form Submission - ${email}`,
     html: `
       <p>New contact form submission from ${name}.</p>
@@ -31,7 +31,7 @@ export default async function(req, res) {
       <p>Name: ${name}</p>
       <p>Email: ${email}</p>
       <p>Phone: ${phone}</p>
-      <p>Phone: ${title}</p>
+      <p>Title: ${title}</p>
       <p>Company: ${company}</p>
     `
   }
