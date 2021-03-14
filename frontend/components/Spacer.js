@@ -5,6 +5,14 @@ const Spacer = styled.div`
     min-height: 100px;
     box-sizing: border-box;
 
+    ${props => props.size === 'xs' && css`
+        min-height: 5px;
+
+        ${respondTo.xs`
+            min-height: 10px;
+        `}
+    `}
+
     ${props => props.size === 'sm' && css`
         min-height: 20px;
 
