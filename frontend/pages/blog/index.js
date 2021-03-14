@@ -1,14 +1,14 @@
 import Head from 'next/head'
 import { Fade } from 'react-reveal'
-import client from '../client'
-import { colors } from '../components/theme'
+import client from '../../client'
+import { colors } from '../../components/theme'
 
 // Components
-import Banner from '../components/Banner'
-import { Box3 } from '../components/Boxes'
-import { Container } from '../components/Containers'
-import Spacer from '../components/Spacer'
-import { H2 } from '../components/Typography'
+import Banner from '../../components/Banner'
+import { Box3 } from '../../components/Boxes'
+import { Container } from '../../components/Containers'
+import Spacer from '../../components/Spacer'
+import { H2 } from '../../components/Typography'
 
 export default function Blog({ blogProps }) {
     // Props
